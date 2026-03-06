@@ -1,13 +1,19 @@
 <script>
 	export let expanded = false;
 	export let toggleNav;
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 </script>
 
 <header class="header">
 	<div class="header-container">
 		<div class="menu-container" class:expanded={expanded}>
-			<span class="logo-text">IM</span>
-			<span class="name-text">Ibrahim</span>
+			<button class="brand" on:click={scrollToTop} aria-label="Scroll to top">
+				<img src="/favicon.ico" alt="Logo" class="logo-icon" />
+				<span class="name-text">Ibrahim</span>
+			</button>
 			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle navigation">
 				<div class="hamburger-icon">
 					<span></span>
@@ -16,7 +22,6 @@
 				</div>
 			</button>
 			<nav class="nav" class:expanded={expanded}>
-				<a href="#home" class="nav-link">Home</a>
 				<a href="#about" class="nav-link">About</a>
 				<a href="#blog" class="nav-link">Blog</a>
 				<a href="#experience" class="nav-link">Experience</a>
@@ -47,61 +52,58 @@
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
-		gap: 16px;
 	}
 
-	.logo-text {
-		font-size: 20px;
-		font-weight: 700;
-		color: #1e3a5f;
-		letter-spacing: 2px;
-		text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
 		flex-shrink: 0;
-		margin-right: 6px;
+	}
+
+	.logo-icon {
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		object-fit: cover;
+		flex-shrink: 0;
 	}
 
 	.name-text {
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 600;
 		color: #1e3a5f;
 		text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 		white-space: nowrap;
-		margin-right: 0;
 		flex-shrink: 0;
 	}
 
 	.menu-container {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		background: rgba(255, 255, 255, 0.15);
 		backdrop-filter: blur(20px) saturate(180%);
 		-webkit-backdrop-filter: blur(20px) saturate(180%);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 50px;
-		padding: 10px 16px;
+		padding: 8px 12px 8px 10px;
 		transition: all 0.4s ease;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
-		max-width: 160px;
-		min-width: 160px;
-		gap: 8px;
+		gap: 10px;
+	}
+
+	.menu-container:not(.expanded) {
+		max-width: 180px;
 	}
 
 	.menu-container.expanded {
-		max-width: 600px;
-		min-width: auto;
-		justify-content: flex-start;
-		padding: 8px 20px;
-		gap: 0;
-	}
-
-	.menu-container.expanded .logo-text {
-		margin-right: 6px;
-	}
-
-	.menu-container.expanded .name-text {
-		margin-right: 12px;
+		max-width: 650px;
+		gap: 6px;
 	}
 
 	.menu-container:hover {
@@ -111,18 +113,17 @@
 	.menu-toggle {
 		background: none;
 		border: none;
-		padding: 0;
+		padding: 4px;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: transform 0.3s ease;
 		flex-shrink: 0;
-		margin: 0 auto;
 	}
 
-	.menu-container.expanded .menu-toggle {
-		margin: 0;
+	.menu-container:not(.expanded) .menu-toggle {
+		margin-left: auto;
 	}
 
 	.menu-toggle:hover {
@@ -174,7 +175,7 @@
 		opacity: 0;
 		transform: translateX(-10px);
 		transition: width 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-		margin-left: 12px;
+		margin-left: 6px;
 	}
 
 	.nav.expanded {
@@ -186,16 +187,15 @@
 	.nav-link {
 		color: #1e3a5f;
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 500;
-		transition: all 0.3s ease;
+		transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
 		position: relative;
-		padding: 8px 16px;
+		padding: 6px 14px;
 		text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 		white-space: nowrap;
 		opacity: 0;
 		transform: translateX(-10px);
-		transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
 	}
 
 	.nav.expanded .nav-link {
@@ -239,16 +239,9 @@
 			padding: 16px 30px;
 		}
 
-		.nav {
-			gap: 20px;
-		}
-
 		.nav-link {
 			font-size: 14px;
-		}
-
-		.logo-text {
-			font-size: 20px;
+			padding: 6px 10px;
 		}
 	}
 
@@ -257,16 +250,18 @@
 			padding: 12px 20px;
 		}
 
-		.nav {
-			gap: 16px;
-		}
-
 		.nav-link {
 			font-size: 13px;
+			padding: 6px 8px;
 		}
 
-		.logo-text {
-			font-size: 18px;
+		.logo-icon {
+			width: 24px;
+			height: 24px;
+		}
+
+		.name-text {
+			font-size: 14px;
 		}
 	}
 </style>
