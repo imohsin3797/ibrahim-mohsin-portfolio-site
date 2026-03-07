@@ -1,19 +1,14 @@
 <script>
 	export let expanded = false;
 	export let toggleNav;
-
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
 </script>
 
 <header class="header">
 	<div class="header-container">
 		<div class="menu-container" class:expanded={expanded}>
-			<button class="brand" on:click={scrollToTop} aria-label="Scroll to top">
+			<a class="brand" href="/" aria-label="Go to home">
 				<img src="/favicon.ico" alt="Logo" class="logo-icon" />
-				<span class="name-text">Ibrahim</span>
-			</button>
+			</a>
 			<button class="menu-toggle" on:click={toggleNav} aria-label="Toggle navigation">
 				<div class="hamburger-icon">
 					<span></span>
@@ -22,10 +17,10 @@
 				</div>
 			</button>
 			<nav class="nav" class:expanded={expanded}>
-				<a href="#about" class="nav-link">About</a>
-				<a href="#blog" class="nav-link">Blog</a>
-				<a href="#experience" class="nav-link">Experience</a>
-				<a href="#contact" class="nav-link">Contact</a>
+				<a href="/#about" class="nav-link">About</a>
+				<a href="/#blog" class="nav-link">Blog</a>
+				<a href="/#experience" class="nav-link">Experience</a>
+				<a href="/#contact" class="nav-link">Contact</a>
 			</nav>
 		</div>
 	</div>

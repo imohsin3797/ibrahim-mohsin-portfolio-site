@@ -52,6 +52,12 @@
 	}
 
 	@media (max-width: 768px) {
+		.name-overlay {
+			bottom: auto;
+			top: 45%;
+			transform: translate(-50%, -50%);
+		}
+
 		.name-overlay h2 {
 			font-size: 80px;
 		}
@@ -59,7 +65,7 @@
 
 	@media (max-width: 480px) {
 		.name-overlay h2 {
-			font-size: 60px;
+			font-size: 56px;
 		}
 	}
 </style>

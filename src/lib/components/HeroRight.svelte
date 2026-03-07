@@ -166,20 +166,43 @@
 
 	@media (max-width: 768px) {
 		.right-content {
-			right: 40px;
+			position: relative;
+			right: auto;
 			top: auto;
-			bottom: 150px;
-			transform: translateY(0);
+			transform: none;
+			text-align: center;
+			padding: 0 20px;
 		}
 
 		.description {
 			font-size: 14px;
+		}
+
+		.description br {
+			display: none;
+		}
+
+		.nus-status {
+			justify-content: center;
+		}
+
+		.cta-button {
+			margin: 0 auto;
+		}
+
+		.social-icons {
+			justify-content: center;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.description {
 			font-size: 13px;
+		}
+
+		.cta-button {
+			font-size: 14px;
+			padding: 12px 24px;
 		}
 	}
 </style>

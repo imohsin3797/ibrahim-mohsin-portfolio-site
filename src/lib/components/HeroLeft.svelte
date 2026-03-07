@@ -119,19 +119,26 @@
 
 	@media (max-width: 768px) {
 		.left-content {
-			left: 30px;
-			top: 10%;
-			transform: translateY(0);
+			position: relative;
+			left: auto;
+			top: auto;
+			transform: none;
+			text-align: center;
+			padding: 0 20px;
+		}
+
+		.badge-container {
+			align-items: center;
 		}
 
 		.title {
-			font-size: 24px;
+			font-size: 28px;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.title {
-			font-size: 18px;
+			font-size: 22px;
 		}
 
 		.status-badge {

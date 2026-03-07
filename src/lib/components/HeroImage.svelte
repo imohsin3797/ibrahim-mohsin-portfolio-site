@@ -57,9 +57,32 @@
 		}
 	}
 
+	@media (max-width: 768px) {
+		.hero-image {
+			position: relative;
+			left: auto;
+			top: auto;
+			transform: none;
+			max-width: 280px;
+			margin: 0 auto;
+			animation: slideUpFadeInCenter 0.8s ease-out 0.2s both;
+		}
+
+		@keyframes slideUpFadeInCenter {
+			from {
+				opacity: 0;
+				transform: translateY(40px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
 	@media (max-width: 480px) {
 		.hero-image {
-			max-width: 280px;
+			max-width: 220px;
 		}
 	}
 </style>
