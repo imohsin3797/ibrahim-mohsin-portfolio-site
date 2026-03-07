@@ -53,36 +53,32 @@
 
 	@media (max-width: 768px) {
 		.hero-image {
-			max-width: 350px;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.hero-image {
 			position: relative;
 			left: auto;
 			top: auto;
 			transform: none;
-			max-width: 280px;
+			max-width: 300px;
 			margin: 0 auto;
-			animation: slideUpFadeInCenter 0.8s ease-out 0.2s both;
+			animation: slideUpMobile 0.8s ease-out 0.2s both;
+			-webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+			mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 		}
+	}
 
-		@keyframes slideUpFadeInCenter {
-			from {
-				opacity: 0;
-				transform: translateY(40px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+	@keyframes slideUpMobile {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 
 	@media (max-width: 480px) {
 		.hero-image {
-			max-width: 220px;
+			max-width: 240px;
 		}
 	}
 </style>

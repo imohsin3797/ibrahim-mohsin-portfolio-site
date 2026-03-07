@@ -2,8 +2,8 @@
 	<p class="description">
 		Hi! I'm Ibrahim Mohsin, a full stack<br />
 		developer and designer passionate about<br />
-		building innovative solutions and<br />
-		impactful ventures. Check out my<br />
+		entrepreneurship and technology.<br />
+		Check out my
 		work here and feel free to reach out<br />
 		to chat!
 	</p>
@@ -12,12 +12,12 @@
 		<img src="/NUS-logo.png" alt="NUS Logo" class="nus-logo" />
 		<span class="status-text">Currently Studying CS @ NUS Singapore</span>
 	</div>
-	<button class="cta-button">
+	<a href="#experience" class="cta-button">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>
 		See my works
-	</button>
+	</a>
 	<div class="social-icons">
 		<a href="https://x.com/IbrahimMohsin_" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -107,6 +107,7 @@
 		cursor: pointer;
 		transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
 		animation: slideUpFadeIn 0.8s ease-out 0.2s both;
+		text-decoration: none;
 	}
 
 	.cta-button:hover {

@@ -53,19 +53,24 @@
 
 	@media (max-width: 768px) {
 		.name-overlay {
-			bottom: auto;
-			top: 45%;
-			transform: translate(-50%, -50%);
+			position: absolute;
+			left: 50%;
+			bottom: 18px;
+			transform: translateX(-50%);
 		}
 
 		.name-overlay h2 {
-			font-size: 80px;
+			font-size: 68px;
 		}
 	}
 
 	@media (max-width: 480px) {
+		.name-overlay {
+			bottom: 14px;
+		}
+
 		.name-overlay h2 {
-			font-size: 56px;
+			font-size: 52px;
 		}
 	}
 </style>

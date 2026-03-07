@@ -211,9 +211,11 @@
 <div class="hero">
 	<div class="container">
 		<HeroLeft {displayedText} />
-		<HeroImage {heroImage} />
+		<div class="hero-center">
+			<HeroImage {heroImage} />
+			<NameOverlay />
+		</div>
 		<HeroRight />
-		<NameOverlay />
 	</div>
 
 	<div class="image-gallery">
@@ -254,14 +256,10 @@
 				<span class="section-label">Get to Know Me</span>
 				<h2 class="about-title">About Me</h2>
 				<p class="about-body">
-					I'm a Morehead-Cain Scholar at UNC Chapel Hill with a passion for building
-					impactful technology solutions. From founding startups to consulting for
-					enterprise clients, I thrive at the intersection of innovation and execution.
+					Hey! I'm currently a sophomore at UNC Chapel Hill but abroad studying at NUS Singapore's School of Computing. I'm passionate about entrepreneurial technology of all kinds, learning about new industries by building within them, and traveling to gain new global perspectives.
 				</p>
 				<p class="about-body">
-					When I'm not coding, you'll find me lifting weights, hitting the golf course,
-					or exploring new places. I believe in continuous learning and pushing boundaries
-					— whether that's kayaking across Lake Superior or diving into a new tech stack.
+					When I'm not building, you'll find me trying to hit a new PR in the gym, crashing out over every hole on the golf course, adventuring to new places, or hiking the nearest peak I can find. Looking forward to what comes next!
 				</p>
 			</div>
 			<div class="about-image-wrapper">
@@ -692,6 +690,10 @@
 		height: 100vh;
 		margin: 0 auto;
 		padding: 0 60px;
+	}
+
+	.hero-center {
+		display: contents;
 	}
 
 	.wave-divider {
@@ -1885,16 +1887,28 @@
 	}
 
 	@media (max-width: 768px) {
+		.hero {
+			min-height: auto;
+		}
+
 		.container {
-			padding: 0 20px;
+			padding: 0 24px;
 			height: auto;
 			min-height: auto;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			padding-top: 100px;
-			padding-bottom: 40px;
-			gap: 32px;
+			padding-top: 110px;
+			padding-bottom: 48px;
+			gap: 16px;
+			box-sizing: border-box;
+		}
+
+		.hero-center {
+			display: block;
+			position: relative;
+			width: fit-content;
+			margin: 0 auto;
 		}
 
 		.image-gallery {
@@ -2045,8 +2059,8 @@
 
 	@media (max-width: 480px) {
 		.container {
-			padding-top: 80px;
-			gap: 24px;
+			padding-top: 90px;
+			gap: 12px;
 		}
 
 		.image-gallery {

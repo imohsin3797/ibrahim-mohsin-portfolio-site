@@ -3,6 +3,11 @@
 </script>
 
 <div class="left-content">
+	<h1 class="title">
+		Full Stack Developer.<br />
+		Global Traveler.<br />
+		Lifelong Entrepreneur.
+	</h1>
 	<div class="badge-container">
 		<div class="status-badge">
 			<span class="dot"></span>
@@ -10,11 +15,6 @@
 		</div>
 		<p class="badge-note">*This website was made using SvelteKit</p>
 	</div>
-	<h1 class="title">
-		Full Stack Developer.<br />
-		Global Traveler.<br />
-		Lifelong Entrepreneur.
-	</h1>
 </div>
 
 <style>
@@ -24,13 +24,15 @@
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 2;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 32px;
 	}
 
 	.badge-container {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		margin-bottom: 32px;
 		animation: slideUpFadeIn 0.8s ease-out 0.2s both;
 	}
 
@@ -125,24 +127,33 @@
 			transform: none;
 			text-align: center;
 			padding: 0 20px;
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
 		}
 
 		.badge-container {
 			align-items: center;
+			order: 2;
 		}
 
 		.title {
-			font-size: 28px;
+			font-size: 30px;
+			order: 1;
+		}
+
+		.badge-note {
+			display: none;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.title {
-			font-size: 22px;
+			font-size: 24px;
 		}
 
 		.status-badge {
-			font-size: 12px;
+			font-size: 11px;
 			padding: 6px 12px;
 		}
 	}
