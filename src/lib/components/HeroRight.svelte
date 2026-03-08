@@ -10,13 +10,13 @@
 	<div class="nus-status">
 		<span class="status-dot"></span>
 		<img src="/NUS-logo.png" alt="NUS Logo" class="nus-logo" />
-		<span class="status-text">Currently Studying CS @ NUS Singapore</span>
+		<span class="status-text">Currently Studying CS @ National University of Singapore</span>
 	</div>
 	<a href="#experience" class="cta-button">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>
-		See my works
+		See my work
 	</a>
 	<div class="social-icons">
 		<a href="https://x.com/IbrahimMohsin_" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">

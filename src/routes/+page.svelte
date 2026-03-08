@@ -526,17 +526,13 @@
 						<h3>Currently Working on...</h3>
 					</div>
 					<div class="card-body">
-						<div class="project-item with-logo">
+						<a href="https://uselintel.com" target="_blank" rel="noopener noreferrer" class="project-item with-logo project-item-link">
 							<img src="/Lintel_Logo copy.png" alt="Lintel" class="item-logo logo-white-bg" />
 							<div class="item-text">
 								<h4>Lintel</h4>
 								<p>AI-powered risk management platform for the construction industry</p>
 							</div>
-						</div>
-						<div class="project-item">
-							<h4>Personal Investment Portfolio Agents</h4>
-							<p>Using AI agents to research, analyze, and make smarter investment decisions</p>
-						</div>
+						</a>
 					</div>
 				</div>
 
@@ -669,6 +665,7 @@
 		margin: 0;
 		padding: 0;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		overflow-x: hidden;
 	}
 
 	/* ===== HERO ===== */
@@ -942,6 +939,10 @@
 		gap: 32px;
 		animation: scroll 45s linear infinite;
 		width: max-content;
+	}
+
+	.carousel-container:hover .carousel-track {
+		animation-play-state: paused;
 	}
 
 	.carousel-item {
@@ -1603,6 +1604,11 @@
 		border-color: rgba(255, 255, 255, 0.15);
 	}
 
+	.project-item-link {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.project-link {
 		color: rgba(255, 255, 255, 0.85);
 		text-decoration: underline;
@@ -2038,11 +2044,11 @@
 
 		.carousel-item {
 			padding: 8px 18px;
-			font-size: 0.88rem;
 		}
 
 		.carousel-track {
 			gap: 20px;
+			animation-duration: 35s;
 		}
 
 		.wave-divider svg,
@@ -2185,12 +2191,11 @@
 
 		.carousel-item {
 			padding: 7px 14px;
-			font-size: 0.82rem;
 		}
 
 		.carousel-track {
 			gap: 14px;
-			animation-duration: 30s;
+			animation-duration: 25s;
 		}
 
 		.wave-divider svg,
